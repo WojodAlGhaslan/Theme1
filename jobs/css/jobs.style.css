@@ -25387,12 +25387,12 @@ header.gl-header .gl-header-bottombar .gl-header-main-menu .container-fluid .gl-
   color: #4ac5b6;
 }
 .gl-hero-img-wrapper {
-  background: url('../images/hero-bg.jpg') center center no-repeat;
+  background: url('../images/about-page-header-bg.jpg') center center no-repeat;
   background-size: cover;
 }
 .gl-hero-img-wrapper:after {
   content: "";
-  background-color: rgba(244, 205, 148, 0.76);
+  background-color: rgba(63, 191, 191, 0.30);
 }
 .gl-hero-img-wrapper .container {
   position: relative;
@@ -25419,7 +25419,7 @@ header.gl-header .gl-header-bottombar .gl-header-main-menu .container-fluid .gl-
 }
 .gl-hero-img-wrapper .container .gl-elements-content-wrapper p.gl-hero-text-paragraph .gl-color-text {
   font-weight: 700;
-  color: #4ac5b6;
+  color: #143346;
 }
 .gl-hero-img-wrapper .container .gl-elements-content-wrapper .gl-directory-searchbar form button {
   color: #454545;

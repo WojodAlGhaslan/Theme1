@@ -25613,7 +25613,7 @@ header.gl-header .gl-header-bottombar .gl-header-main-menu .container-fluid .gl-
   z-index: 1;
 }
 .gl-about-page-header-wrapper {
-  background-image: url("../../jobs/images/statistics-page-header.jpg");
+  background-image: url("../../jobs/images/about-page-header-bg.jpg");
   background-size: cover;
   background-position: center;
   text-align: center;
