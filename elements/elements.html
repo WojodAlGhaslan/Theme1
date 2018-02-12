@@ -8,14 +8,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <!-- PAGE TITLE -->
-  <title>AHM - About Us</title>
+  <title>AHM - Arabic Health Measurements</title>
 
+  <!-- FAVICON ICONS -->
   <link rel="shortcut icon" href="images/favicon.ico">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans%7CRoboto:300,400,700" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/jobs.style.css">
+  <link rel="stylesheet" href="css/elements.style.css">
 </head>
 
-<body class="gl-about-us-template">
+<body class="gl-elements-page">
 
 <div id="gl-circle-loader-wrapper">
   <div id="gl-circle-loader-center">
@@ -25,51 +28,46 @@
   </div>
 </div>
 
+<!-- HEADER -->
 <header class="gl-header">
   <!-- BOTTOM BAR/NAVIGATION -->
   <div class="gl-header-bottombar">
     <!-- Navigation Menu start-->
     <nav class="navbar gl-header-main-menu" role="navigation">
       <div class="container-fluid">
-        <div class="row">
-          <!-- Navbar Toggle -->
-          <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-              </button>
 
-              <!-- Logo -->
-              <a class="navbar-brand" href="index.html"><img class="logo" src="images/logo-header.png" alt="GLIMPSE"></a>
-          </div>
-          <!-- Navbar Toggle End -->
+        <!-- Navbar Toggle -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
 
-          <!-- navbar-collapse start-->
-          <div id="nav-menu" class="navbar-collapse gl-menu-wrapper collapse" role="navigation">
-            <ul class="nav navbar-nav gl-menus">
+            <!-- Logo -->
+            <a class="navbar-brand" href="../business/index.html"><img class="logo" src="../jobs/images/logo-header.png" alt="GLIMPSE"></a>
+        </div>
+        <!-- Navbar Toggle End -->
+
+        <!-- navbar-collapse start-->
+        <div id="nav-menu" class="navbar-collapse gl-menu-wrapper collapse" role="navigation">
+          <ul class="nav navbar-nav gl-menus">
               <li>
-                <a href="index.html">Home</a>
+                <a href="../jobs/index.html">Home</a>
+              </li>
+              <li class = "active">
+                <a href="../elements/elements.html">Statistics</a>
               </li>
               <li>
-                <a href="..\elements\elements.html">Statistics</a>
-              </li> 
-              <li class="active">
-                <a href="about-us.html">About</a>
+                <a href="../jobs/about-us.html">About</a>
               </li>
               <li>
-                <a href="contact-us.html">Contact</a>
+                <a href="../jobs/contact-us.html">Contact</a>
               </li>
           </ul>
-          </div>
-          <!-- navbar-collapse end-->
-		<!--
-          <div class="gl-extra-btns-wrapper">
-            <button class="gl-login-btn" id="gl-side-menu-btn">Login</button>
-            <button class="gl-add-post-btn">+ Post Add</button>
-          </div>
-		  -->
         </div>
+        <!-- navbar-collapse end-->
+
       </div>
     </nav>
     <!-- Navigation Menu end-->
@@ -82,166 +80,102 @@
 <section class="gl-about-page-header-wrapper">
   <div class="container">
     <div class="row">
-      <h1 class="gl-page-title">About Us</h1>
+      <h1 class="gl-page-title">Statistics</h1>
     </div>
   </div>
 </section>
 <!-- PAGE HEADER -->
 
-<!-- PAGE CONTETNT -->
-<section class="gl-page-content-section">
-  <!-- ABOUT COMPANY -->
-  <div class="gl-about-compnay-section gl-inner-section">
-    <div class="container">
-      <div class="row">
-        <!-- Image -->
-        <div class="gl-about-company-image gl-left-side col-md-6 col-sm-6 col-xs-12">
-          <div class="gl-page-img-wrapper">
-            <img src="images/about-us.jpg" alt="About Us" class="gl-lazy">
-          </div>
-        </div>
-        <!-- END -->
+<!-- Elements Shortcode -->
+<section class="gl-elements-shortcode-section">
+  <div class="container">
+    <div class="row">
+	<div>
+		<h3>
+			With over 300 measures and supported by some of the worlds best doctors, clinicians, therapists and Physical Medicine and Rehabilitation researchers, the Rehabilitation Measure Database (RMD) is the go-to resource for benchmarks and outcomes.
+		</h3>
+		</div>
+		<br>
+		<br>
+<!-- *****************
+      Accordion 
+***************** -->
+      <div class="gl-element-type-wrapper">
+        <!-- Element Name -->
+        <h3 class="gl-element-title">Measurements</h3>
+        <!-- End -->
+		<!-- Chart -->
+		<canvas id="myChart" style="height:40vh; width:60vw"></canvas>
+		<script>
+			var ctx = document.getElementById('myChart').getContext('2d');
+			var chart = new Chart(ctx, {
+				// The type of chart we want to create
+				type: 'horizontalBar',
+				// The data for our dataset
+				data: {
+					labels: ["M1", "M2", "M3", "M4", "M5", "M6", "M7"],
+					datasets: [{
+						label: "Measurements to Area",
+						backgroundColor: ['#ff6384','#36a2eb','#cc65fe','#ffce56', '#FF5733' , '#BEFF33', '#33FFB8'],
+						borderColor: 'rgb(255, 99, 132)',
+						data: ['10', '20', '30', '12', '17', '34', '4'],
+					}]
+				},
 
-        <!-- About Text -->
-        <div class="gl-about-company-text gl-right-side col-md-6 col-sm-6 col-xs-12">
-          <h3 class="gl-single-title">About AHM</h3>
-          <p>On the other hand, we denounce with righteous indignation and dislike men whos are of pleasure of the moment, so blinded by desire, that they cannot foresee the pain an On the other hand, we denounce with righteous indignation and dislike men who ares of pleasure of the moment, so blinded by desire, that they cannot foresee the pain an blame belongs to those who fail in their duty through weakness of will, which is the a On the other hand, we denounce with righteous indignation and dislike men whos are of pleasure of the moment, so blinded by desire, that they cannot foresee the pain an On the other hand, we denounce with righteous indignation and dislike men who ares of pleasure of the moment, so blinded by desire, that they cannot foresee the pain an </p>
+				// Configuration options go here
+				options: {}
+			});
+		</script>
+<br>
+<br>
 
-          <p>On the other hand, we denounce with righteous indignation and dislike men whos are of pleasure of the moment, so blinded by desire, that they cannot foresee the pain an On the other hand, we denounce</p>
-        </div>
-        <!-- About Text End -->
-      </div>
+<!-- Accordion With Collapse Icon -->
+
+<!-- Accordion End -->
+
+<!-- *****************
+      Tab
+***************** -->
+      <div class="gl-element-type-wrapper">
+        <!-- Element Name -->
+        <h3 class="gl-element-title">Articles</h3>
+        <!-- End -->
+		<!-- Chart -->
+		<div>
+		<canvas id="myChart2" style="height:80vh; width:80vw"></canvas>
+		<script>
+				var ctx = document.getElementById('myChart2').getContext('2d');
+				var chart = new Chart(ctx, {
+					// The type of chart we want to create
+					type: 'doughnut',
+
+					// The data for our dataset
+					data: {
+						datasets: [{
+							data: [35, 25, 11, 13, 10, 5, 2],
+							backgroundColor: ['#ff6384','#36a2eb','#cc65fe','#ffce56', '#FF5733' , '#BEFF33', '#33FFB8'],
+						}],
+
+					// These labels appear in the legend and in the tooltips when hovering different arcs
+					labels: ["Measurement 1", "Measurement 2", "Measurement 3", "Measurement 4", "Measurement 5", "Measurement 6", "Measurement 7"]
+					},
+
+					// Configuration options go here
+					options: {
+								title: {
+								display: true,
+								text: 'Number of articles in measurements'
+								}
+							}
+				});
+		</script>
+		</div>
+		<br><br>
+		<!-- Chart -->
     </div>
   </div>
-  <!-- ABOUT COMPANY END -->
-
-  <!-- EXPERT TEAM -->
-  <div class="gl-expert-team-section gl-inner-section">
-    <div class="container">
-      <div class="row">
-        <!-- SECTION HEADINGS -->
-        <div class="gl-section-headings">
-          <h1>AHM Team</h1>
-          <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-        </div>
-        <!-- END -->
-
-        <div class="gl-team-wrapper">
-          <!-- Agent -->
-          <div class="gl-agents-box col-md-3 col-sm-6 col-xs-12 appear fadeIn" data-wow-duration=".5s" data-wow-delay=".3s">
-            <div class="gl-agents-img-wrapper">
-              <img src="images/agents-1.jpg" alt="AGENTS" class="gl-lazy">
-            </div>
-
-            <div class="gl-feat-item-details">
-              <h3>
-                <a href="#">Nada albawardi</a>
-              </h3>
-              <p>xxxxxxxxxxxx</p>
-            </div>
-          </div>
-          <!-- END -->
-
-          <!-- Agent -->
-          <div class="gl-agents-box col-md-3 col-sm-6 col-xs-12 appear fadeIn" data-wow-duration=".5s" data-wow-delay=".5s">
-            <div class="gl-agents-img-wrapper">
-              <img src="images/agents-2.jpg" alt="AGENTS" class="gl-lazy">
-            </div>
-
-            <div class="gl-feat-item-details">
-              <h3>
-                <a href="#">Quratulain Shaikh</a>
-              </h3>
-              <p>xxxxxxxxxxxxxxxxx</p>
-            </div>
-          </div>
-          <!-- END -->
-
-          <!-- Agent -->
-          <div class="gl-agents-box col-md-3 col-sm-6 col-xs-12 appear fadeIn" data-wow-duration=".5s" data-wow-delay=".7s">
-            <div class="gl-agents-img-wrapper">
-              <img src="images/agents-3.jpg" alt="AGENTS" class="gl-lazy">
-            </div>
-
-            <div class="gl-feat-item-details">
-              <h3>
-                <a href="#">RA</a>
-              </h3>
-              <p>xxxxxxxxxxxxxxx</p>
-            </div>
-          </div>
-          <!-- END -->
-
-          <!-- Agent -->
-          <div class="gl-agents-box col-md-3 col-sm-6 col-xs-12 appear fadeIn" data-wow-duration=".5s" data-wow-delay=".9s">
-            <div class="gl-agents-img-wrapper">
-              <img src="images/agents-4.jpg" alt="AGENTS" class="gl-lazy">
-            </div>
-
-            <div class="gl-feat-item-details">
-              <h3>
-                <a href="#">RA</a>
-              </h3>
-              <p>xxxxxxxxxxxxxx</p>
-            </div>
-          </div>
-          <!-- END -->
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- EXPERT TEAM END -->
-
-  <!-- EXPERTISE SECTION -->
-  <div class="gl-our-expertise-section gl-inner-section">
-    <div class="container">
-      <div class="row">
-        <!-- EXPERTISE DETAILS -->
-        <div class="gl-expertise-text-wrapper gl-left-side col-md-6 col-sm-6 col-xs-12">
-          <h3 class="gl-single-title">About HSRC</h3>
-
-          <p>On the other hand, we denounce with righteous indignation and dislike men whos are of pleasure of the moment, so blinded by desire, that they cannot foresee the pain an On the other hand, we denounce with righteous indignation and dislike men who ares of pleasure of the moment, so blinded by desire, that they cannot foresee the pain an blame belongs to those who fail in their duty through weakness of will, which is the a On the other hand, we denounce with righteous indignation and dislike men whos are of pleasure of the moment.</p>
-
-          <p>On the other hand, we denounce with righteous indignation and dislike men whos are of pleasure of the moment, so blinded by desire, that they cannot foresee the pain an On the other hand, we denounce</p>
-        </div>
-        <!-- EXPERTISE DETAILS END -->
-
-        <!-- SKILLS -->
-        <div class="gl-progress-wrapper gl-right-side col-md-6 col-sm-6 col-xs-12">
-          <h3 class="gl-single-title">Services</h3>
-
-          <div class="gl-skillbar clearfix" data-percent="90">
-              <p class="gl-skillbar-title">Data clinic</p>
-              <div class="gl-skillbar-bar-wrapper">
-                  <div class="gl-skillbar-bar"></div>
-              </div>
-              <span class="skill-bar-percent"></span>
-          </div>
-
-          <div class="gl-skillbar clearfix" data-percent="80">
-              <p class="gl-skillbar-title">Academic Calendar</p>
-              <div class="gl-skillbar-bar-wrapper">
-                  <div class="gl-skillbar-bar"></div>
-              </div>
-              <span class="skill-bar-percent"></span>
-          </div>
-
-          <div class="gl-skillbar clearfix" data-percent="70">
-              <p class="gl-skillbar-title">Research software</p>
-              <div class="gl-skillbar-bar-wrapper">
-                  <div class="gl-skillbar-bar"></div>
-              </div>
-              <span class="skill-bar-percent"></span>
-          </div>
-        </div>
-        <!-- SKILLS END -->
-      </div>
-    </div>
-  </div>
-  <!-- EXPERTISE SECTION END -->
 </section>
-<!-- PAGE CONTETNT END -->
-
+<!-- Elements Shortcode End -->
 
 <!-- FOOTER -->
 <footer>
@@ -252,7 +186,7 @@
         <!-- FOOTER WIDGET -->
         <div class="gl-footer-widget gl-footer-logo gl-footer-fixed-widget">
           <a href="#">
-            <img src="images/logo-footer.png" alt="Glimpse">
+            <img src="../jobs/images/logo-footer.png" alt="Glimpse">
           </a>
         </div>
         <!-- END -->
@@ -336,12 +270,15 @@
 </footer>
 <!-- FOOTER END -->
 
+<!-- Google Map -->
 <script src="../js/jquery.min.js"></script>
-
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBF0FPDHlurGkDKua7PfZjpD2fr2rQsRw0&libraries=places"></script>
+<script src="../js/infobubble-richmarker.js"></script>
+<script src="../js/business-map/google-contactmap-init.js"></script>
+<script src="../js/google-autocomplete.js"></script>
 
 <script src="../js/plugins.js"></script>
 <script src="../js/scripts.js"></script>
-
 <script src="../js/main.js"></script>
 </body>
 </html>

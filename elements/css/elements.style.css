@@ -25612,3 +25612,44 @@ header.gl-header .gl-header-bottombar .gl-header-main-menu .container-fluid .gl-
   position: relative;
   z-index: 1;
 }
+.gl-about-page-header-wrapper {
+  background-image: url("../../jobs/images/statistics-page-header.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 260px 0;
+  position: relative;
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .gl-about-page-header-wrapper {
+    padding-bottom: 200px 0;
+  }
+}
+.gl-about-page-header-wrapper:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,000000+100&0+0,0.6+100 */
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#99000000', GradientType=0);
+  /* IE6-9 */
+}
+.gl-about-page-header-wrapper .gl-page-title {
+  font-family: 'pt_sansregular', sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
